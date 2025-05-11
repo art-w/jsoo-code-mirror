@@ -81,6 +81,8 @@ module View : sig
 
   val dom : t -> Brr.El.t
   val update_listener : unit -> (Update.t -> unit, Jv.t) State.facet
+  val decorations : unit -> (Decoration.Range_set.t, Jv.t) State.facet
+  val request_measure : t -> unit
   val line_wrapping : unit -> Extension.t
   val set_doc : t -> Jstr.t -> unit
 end
